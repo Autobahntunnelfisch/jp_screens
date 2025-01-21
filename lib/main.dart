@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:jp_screens/Screens/home_screen.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const JPScreens());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class JPScreens extends StatelessWidget {
+  const JPScreens({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Center(),
-      ),
-    );
+    return MaterialApp(home: HomeScreen());
   }
 }
