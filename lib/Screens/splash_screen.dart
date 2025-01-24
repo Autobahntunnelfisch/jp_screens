@@ -17,6 +17,26 @@ class _SplashScreenState extends State<SplashScreen> {
           fit: BoxFit.cover,
         ),
       ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: Stack(
+          alignment: Alignment.center,
+          children: [
+            Positioned(
+              left: -32,
+              top: 100,
+              width: 570,
+              height: 570,
+              child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/Cupcake1.png")),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
