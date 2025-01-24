@@ -10,6 +10,13 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("assets/images/bg_startscreen.png"),
+          fit: BoxFit.cover,
+        ),
+      ),
+    );
   }
 }
