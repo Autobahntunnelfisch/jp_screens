@@ -1,4 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:jp_screens/Screens/home_screen.dart';
+import 'package:jp_screens/widgets/j_p_button.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -44,6 +48,72 @@ class _SplashScreenState extends State<SplashScreen> {
                     image: AssetImage("assets/images/snack_snack.png"),
                     fit: BoxFit.fitWidth,
                     opacity: 0.5,
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              top: 570,
+              height: 225,
+              width: 365,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(30),
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 9.0, sigmaY: 9.0),
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                      side: BorderSide(
+                        color: Color.fromRGBO(255, 255, 255, 0.3),
+                        width: 0.3,
+                      ),
+                    ),
+                    color: Color.fromRGBO(255, 255, 255, 0.1),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 25,
+                                fontWeight: FontWeight.w900,
+                                fontFamily: "CupertinoSystemDisplay"),
+                            "Feeling Snackish Today?",
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(35, 0, 35, 20),
+                          child: Text(
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color:
+                                      const Color.fromARGB(255, 208, 208, 208),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w400,
+                                  fontFamily: "CupertinoSystemDisplay"),
+                              "Explore Angi's most popular snack selection and get instantly happy."),
+                        ),
+                        SizedBox(
+                          height: 68,
+                          width: 230,
+                          child: JPButton(
+                            onpress: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => HomeScreen()),
+                              );
+                            },
+                            text: "Order Now",
+                            textcolor: Colors.white,
+                            fontsize: 18,
+                            fontweight: FontWeight.w900,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
