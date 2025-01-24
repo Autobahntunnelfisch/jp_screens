@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jp_screens/widgets/home_list_view.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,18 +22,19 @@ class _HomeScreenState extends State<HomeScreen> {
         body: Stack(
           children: [
             Positioned(
-              width: 350,
+              width: 300,
               left: 20,
-              top: 70,
+              top: 75,
               child: Text(
                 textAlign: TextAlign.left,
                 "Choose Your Favorite Snack",
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 25,
+                    fontSize: 22,
                     fontWeight: FontWeight.w900),
               ),
             ),
+            HomeListView(),
           ],
         ),
       ),
