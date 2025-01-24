@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jp_screens/Screens/home_screen.dart';
+import 'package:jp_screens/Screens/splash_screen.dart';
 
 void main() {
   runApp(const JPScreens());
@@ -10,6 +10,6 @@ class JPScreens extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: HomeScreen());
+    return MaterialApp(home: SplashScreen());
   }
 }
