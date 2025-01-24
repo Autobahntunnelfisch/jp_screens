@@ -34,6 +34,20 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
               ),
             ),
+            Positioned(
+              top: 455,
+              width: 400,
+              height: 300,
+              child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/snack_snack.png"),
+                    fit: BoxFit.fitWidth,
+                    opacity: 0.5,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
