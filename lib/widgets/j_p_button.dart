@@ -9,6 +9,8 @@ class JPButton extends StatelessWidget {
     required this.fontsize,
     required this.fontweight,
     required this.onpress,
+    required this.gradientColor1,
+    required this.gradientColor2,
     super.key,
   });
   final String text;
@@ -18,6 +20,8 @@ class JPButton extends StatelessWidget {
   final VoidCallback onpress;
   final double buttonheight;
   final double buttonwidth;
+  final Color gradientColor1;
+  final Color gradientColor2;
 
   @override
   Widget build(BuildContext context) {
@@ -48,8 +52,8 @@ class JPButton extends StatelessWidget {
               center: Alignment.bottomRight,
               radius: 5,
               colors: [
-                Color.fromRGBO(246, 158, 163, 1),
-                Color.fromRGBO(233, 112, 196, 1)
+                gradientColor1,
+                gradientColor2,
               ],
             ),
           ),
