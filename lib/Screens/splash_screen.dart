@@ -76,10 +76,10 @@ class _SplashScreenState extends State<SplashScreen> {
                           child: Text(
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 25,
-                                fontWeight: FontWeight.w900,
-                                fontFamily: "CupertinoSystemDisplay"),
+                              color: Colors.white,
+                              fontSize: 25,
+                              fontWeight: FontWeight.w900,
+                            ),
                             "Feeling Snackish Today?",
                           ),
                         ),
@@ -88,29 +88,28 @@ class _SplashScreenState extends State<SplashScreen> {
                           child: Text(
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                  color:
-                                      const Color.fromARGB(255, 208, 208, 208),
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w400,
-                                  fontFamily: "CupertinoSystemDisplay"),
+                                color: const Color.fromARGB(255, 208, 208, 208),
+                                fontSize: 15,
+                                fontWeight: FontWeight.w400,
+                              ),
                               "Explore Angi's most popular snack selection and get instantly happy."),
                         ),
-                        SizedBox(
-                          height: 68,
-                          width: 230,
-                          child: JPButton(
-                            onpress: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => HomeScreen()),
-                              );
-                            },
-                            text: "Order Now",
-                            textcolor: Colors.white,
-                            fontsize: 18,
-                            fontweight: FontWeight.w900,
-                          ),
+                        JPButton(
+                          buttonheight: 68,
+                          buttonwidth: 230,
+                          onpress: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomeScreen()),
+                            );
+                          },
+                          text: "Order Now",
+                          textcolor: Colors.white,
+                          fontsize: 18,
+                          fontweight: FontWeight.w900,
+                          gradientColor1: Color.fromRGBO(246, 158, 163, 1),
+                          gradientColor2: Color.fromRGBO(233, 112, 196, 1),
                         ),
                       ],
                     ),
